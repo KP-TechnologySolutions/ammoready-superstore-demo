@@ -1,0 +1,22 @@
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "AmmoReady Superstore - America's Advanced Firearms Marketplace",
+  description: "Shop from 1,800+ verified dealers nationwide. Live inventory, instant checkout, and secure fulfillment for firearms, ammunition, and accessories.",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>{children}</body>
+    </html>
+  );
+}
